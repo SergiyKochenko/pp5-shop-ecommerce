@@ -43,6 +43,9 @@ INSTALLED_APPS = [
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
+    # =====================
+    'allauth.socialaccount.providers.github',
+    # =====================
     'home',
     'products',
     'bag',
@@ -91,6 +94,18 @@ TEMPLATES = [
         },
     },
 ]
+
+# ===================
+SOCIALACCOUNT_PROVIDER = {
+    'github': {
+        'APP': {
+            'client_id': '313edadc806db653199c',
+            'secret': 'bf5181e25be98fc05e2f99232b1c48b444b3ee59',
+            'key': ''
+        }
+    }
+}
+# ===================
 
 MESSAGE_STORAGE = 'django.contrib.messages.storage.session.SessionStorage'
 
