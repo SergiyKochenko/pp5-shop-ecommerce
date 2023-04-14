@@ -13,6 +13,9 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 import os
 import dj_database_url
 
+if os.path.exists("env.py"):
+    import env
+
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -101,7 +104,7 @@ SOCIALACCOUNT_PROVIDER = {
     'github': {
         'APP': {
             'client_id': '313edadc806db653199c',
-            'secret': 'bf5181e25be98fc05e2f99232b1c48b444b3ee59',
+            'secret': '1273ea1bb8f7e36a955117bc81d4cfc8347488c5',
             'key': ''
         }
     }
@@ -129,6 +132,7 @@ ACCOUNT_SIGNUP_EMAIL_ENTER_TWICE = True
 ACCOUNT_USERNAME_MIN_LENGTH = 4
 LOGIN_URL = '/accounts/login/'
 LOGIN_REDIRECT_URL = '/'
+
 
 WSGI_APPLICATION = 'boutique_ado.wsgi.application'
 
@@ -206,3 +210,7 @@ DEFAULT_FROM_EMAIL = 'boutiqueado@example.com'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+STRIPE_PUBLIC_KEY = os.environ.get('STRIPE_PUBLIC_KEY', '')
+STRIPE_SECRET_KEY = os.environ.get('STRIPE_SECRET_KEY', '')
+STRIPE_WH_SECRET = os.environ.get('STRIPE_WH_SECRET', '')
