@@ -55,6 +55,7 @@ INSTALLED_APPS = [
     'bag',
     'checkout',
     'profiles',
+    'contactus',
 
     # Other
     'crispy_forms',
@@ -196,7 +197,7 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 # Stripe
-FREE_DELIVERY_THRESHOLD = 50
+FREE_DELIVERY_THRESHOLD = 99
 STANDARD_DELIVERY_PERCENTAGE = 10
 STRIPE_CURRENCY = 'usd'
 STRIPE_PUBLIC_KEY = os.getenv('STRIPE_PUBLIC_KEY', '')
