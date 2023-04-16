@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     'allauth.socialaccount',
     # =====================
     'allauth.socialaccount.providers.github',
+    'allauth.socialaccount.providers.twitter',
     # =====================
     'home',
     'products',
@@ -101,15 +102,7 @@ TEMPLATES = [
 ]
 
 # ===================
-SOCIALACCOUNT_PROVIDER = {
-    'github': {
-        'APP': {
-            'client_id': '313edadc806db653199c',
-            'secret': '1273ea1bb8f7e36a955117bc81d4cfc8347488c5',
-            'key': ''
-        }
-    }
-}
+
 # ===================
 
 MESSAGE_STORAGE = 'django.contrib.messages.storage.session.SessionStorage'
@@ -128,11 +121,15 @@ EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 ACCOUNT_AUTHENTICATION_METHOD = 'username_email'
 ACCOUNT_EMAIL_REQUIRED = True
-ACCOUNT_EMAIL_VERIFICATION = 'mandatory'
+# ACCOUNT_EMAIL_VERIFICATION = 'mandatory'
 ACCOUNT_SIGNUP_EMAIL_ENTER_TWICE = True
 ACCOUNT_USERNAME_MIN_LENGTH = 4
 LOGIN_URL = '/accounts/login/'
 LOGIN_REDIRECT_URL = '/'
+# -----------------------
+ACCOUNT_EMAIL_VERIFICATION = "none"
+ACCOUNT_LOGOUT_ON_GET = True
+# ------------------------
 
 
 WSGI_APPLICATION = 'boutique_ado.wsgi.application'
