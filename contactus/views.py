@@ -1,4 +1,4 @@
-from django.shortcuts import render, HttpResponseRedirect
+from django.shortcuts import render, HttpResponseRedirect, get_object_or_404
 from django.http import HttpResponseRedirect
 from django.contrib import messages
 from .forms import ContactForm
