@@ -57,6 +57,7 @@ INSTALLED_APPS = [
     'checkout',
     'profiles',
     'contactus',
+    'newsletter',
 
     # Other
     'crispy_forms',
@@ -101,10 +102,6 @@ TEMPLATES = [
     },
 ]
 
-# ===================
-
-# ===================
-
 MESSAGE_STORAGE = 'django.contrib.messages.storage.session.SessionStorage'
 
 AUTHENTICATION_BACKENDS = (
@@ -126,8 +123,6 @@ ACCOUNT_SIGNUP_EMAIL_ENTER_TWICE = True
 ACCOUNT_USERNAME_MIN_LENGTH = 4
 LOGIN_URL = '/accounts/login/'
 LOGIN_REDIRECT_URL = '/'
-
-
 
 WSGI_APPLICATION = 'boutique_ado.wsgi.application'
 

@@ -265,6 +265,7 @@ input[name='q']::placeholder {
     border-radius: 0;
 }
 
+
 /* fixed top navbar only on medium and up */
 @media (min-width: 992px) {
     .fixed-top-desktop-only {
@@ -276,7 +277,7 @@ input[name='q']::placeholder {
     }
 
     .header-container {
-        padding-top: 116px;
+        padding-top: 164px;
     }
 }
 
@@ -304,26 +305,16 @@ input[name='q']::placeholder {
 .containers {
     max-width: 100%;
     }
-
-    .header-container {
-        padding-top: 116px;
-    }
 }
 
     @media (min-width: 768px){
 .containers, .container-md, .container-sm {
     max-width: 100%;
     }
-    .header-container {
-        padding-top: 116px;
-    }
 }
 
     @media (min-width: 576px){
 .containers, .container-sm {
     max-width: 100%;
-    }
-    .header-container {
-        padding-top: 116px;
     }
 }

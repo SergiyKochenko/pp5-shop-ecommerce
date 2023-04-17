@@ -35,6 +35,9 @@
     {% endblock %}
 
     <title>House Stock {% block extra_title %}{% endblock %}</title>
+
+
+
   </head>
   <body>
     <header class="container-fluid fixed-top">
@@ -232,6 +235,19 @@
                 </tr>
               </tbody>
             </table>
+
+
+<!-- =================== -->
+<!-- Newsletter subscribe -->
+<div>
+    <h2>
+        <a class="newsletter text-center" href="{% url 'newsletter' %}">
+            <strong>Sign up for our newsletter</strong>
+        </a>
+    </h2>
+</div>
+<!-- ========================= -->
+
           </div>
           <!--Grid column-->
         </div>
